@@ -152,7 +152,7 @@ Send command `0x15` to deactivate alarm sound.
 - `0x77` `0x40` `0x5B` (A-2)
 - `0x77` `0x40` `0x4F` (A-3)
 
-Anti-collision sensitivity. (1 = low; 2 = medium; 3 = high)
+Anti-collision sensitivity. (0=off; 1 = low; 2 = medium; 3 = high)
 
 Press `▲` and `▼` at the same time to adjust.
 
@@ -172,6 +172,9 @@ Set height, press `M`, then press `1`, `2`, or `3` to save.
 - `0x79` `0x3F` `0x5B` (E02)
 
 Problem with the motors. This could be due to overheating, collision, etc.
+
+- E22 - When motor 2 is unplugged before operating.
+- E23 - When motor 1 in unplugged before operating.
 
 **rSt** / **ASr**
 
