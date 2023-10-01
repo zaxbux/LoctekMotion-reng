@@ -1,5 +1,5 @@
-#define MESSAGE_BEGIN 0x9B
-#define MESSAGE_FINISH 0x9D
+#define PACKET_MAGIC_VALUE 0x9B
+#define PACKET_SENTINEL_VALUE 0x9D
 
 enum MessageType
 {

@@ -227,7 +227,7 @@ void hs_rx(uint8_t in)
 {
 	// s[2]->write(in);
 
-	if (in == MESSAGE_BEGIN)
+	if (in == PACKET_MAGIC_VALUE)
 	{
 		hs_rx_buf_len = 0;
 		hs_rx_buf_pos = 0;
@@ -236,7 +236,7 @@ void hs_rx(uint8_t in)
 	hs_rx_buf[hs_rx_buf_pos] = in;
 	hs_rx_buf_pos++;
 
-	if (hs_rx_buf_len == 0 && hs_rx_buf[0] == MESSAGE_BEGIN)
+	if (hs_rx_buf_len == 0 && hs_rx_buf[0] == PACKET_MAGIC_VALUE)
 	{
 		// Start of packet
 		if (hs_rx_buf_pos == 1)
@@ -254,7 +254,7 @@ void hs_rx(uint8_t in)
 
 	if (hs_rx_buf_pos == hs_rx_buf_len)
 	{
-		if (in == MESSAGE_FINISH && hs_rx_buf_len >= 6)
+		if (in == PACKET_SENTINEL_VALUE && hs_rx_buf_len >= 6)
 		{
 			s[2]->flush();
 			s[2]->write(hs_rx_buf, hs_rx_buf_len);
@@ -287,7 +287,7 @@ void cb_rx(uint8_t in)
 {
 	// s[1]->write(in);
 
-	if (in == MESSAGE_BEGIN)
+	if (in == PACKET_MAGIC_VALUE)
 	{
 		cb_rx_buf_len = 0;
 		cb_rx_buf_pos = 0;
@@ -296,7 +296,7 @@ void cb_rx(uint8_t in)
 	cb_rx_buf[cb_rx_buf_pos] = in;
 	cb_rx_buf_pos++;
 
-	if (cb_rx_buf_len == 0 && cb_rx_buf[0] == MESSAGE_BEGIN)
+	if (cb_rx_buf_len == 0 && cb_rx_buf[0] == PACKET_MAGIC_VALUE)
 	{
 		// Start of packet
 		if (cb_rx_buf_pos == 1)
@@ -314,7 +314,7 @@ void cb_rx(uint8_t in)
 
 	if (cb_rx_buf_pos == cb_rx_buf_len)
 	{
-		if (in == MESSAGE_FINISH && cb_rx_buf_len >= 6)
+		if (in == PACKET_SENTINEL_VALUE && cb_rx_buf_len >= 6)
 		{
 			s[1]->flush();
 			s[1]->write(cb_rx_buf, cb_rx_buf_len);
