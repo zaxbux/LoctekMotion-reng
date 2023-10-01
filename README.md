@@ -53,7 +53,6 @@ I purchased new desk from FlexiSpot recently and was happy to discover there wer
 
 [Schematic (PDF)](docs/images/basic.pdf)
 
-
 I am terminating the RJ45 port/connectors according to the T568B standard.
 
 | Hand Set |           | RJ45   | Arduino | Arduino | RJ45   | Control Box |
@@ -72,21 +71,21 @@ I am terminating the RJ45 port/connectors according to the T568B standard.
 > <https://alselectro.wordpress.com/2015/03/03/8051-tutorials-3-interfacing-7-segment-display/>
 
 ```
-     ╱‾‾‾‾‾╲
-    |   A   |
- ╱‾╲ ╲_____╱ ╱‾╲
-|   |       |   |
-| F |       | B |
-|   |       |   |
- ╲_╱ ╱‾‾‾‾‾╲ ╲_╱
-    |   G   |
- ╱‾╲ ╲_____╱ ╱‾╲
-|   |       |   |
-| E |       | C |
-|   |       |   |
- ╲_╱ ╱‾‾‾‾‾╲ ╲_╱
-    |   D   |
-     ╲_____╱  [.]
+     ╱‾‾‾‾‾╲               ╱‾‾‾‾‾╲               ╱‾‾‾‾‾╲
+    |   A   |             |   A   |             |   A   |
+ ╱‾╲ ╲_____╱ ╱‾╲       ╱‾╲ ╲_____╱ ╱‾╲       ╱‾╲ ╲_____╱ ╱‾╲
+|   |       |   |     |   |       |   |     |   |       |   |
+| F |       | B |     | F |       | B |     | F |       | B |
+|   |       |   |     |   |       |   |     |   |       |   |
+ ╲_╱ ╱‾‾‾‾‾╲ ╲_╱       ╲_╱ ╱‾‾‾‾‾╲ ╲_╱       ╲_╱ ╱‾‾‾‾‾╲ ╲_╱
+    |   G   |             |   G   |             |   G   |
+ ╱‾╲ ╲_____╱ ╱‾╲       ╱‾╲ ╲_____╱ ╱‾╲       ╱‾╲ ╲_____╱ ╱‾╲
+|   |       |   |     |   |       |   |     |   |       |   |
+| E |       | C |     | E |       | C |     | E |       | C |
+|   |       |   |     |   |       |   |     |   |       |   |
+ ╲_╱ ╱‾‾‾‾‾╲ ╲_╱       ╲_╱ ╱‾‾‾‾‾╲ ╲_╱       ╲_╱ ╱‾‾‾‾‾╲ ╲_╱
+    |   D   |             |   D   |             |   D   |
+     ╲_____╱  [.]          ╲_____╱  [.]          ╲_____╱  [.]
 ```
 
 | [.] | G   | F   | E   | D   | C   | B   | A   | value  | character |
